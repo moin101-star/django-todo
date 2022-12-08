@@ -31,6 +31,63 @@ That was pretty simple, right? Now let's make the App live. We just need to star
 
 ```bash
 $ python manage.py runserver
+
+Todo-list
+=======
+
+sudo pip3 install virtualenv
+mkdir ~/newproject
+cd ~/newproject
+virtualenv newenv
+source newenv/bin/activate
+git clone url
+pip install django
+vi todoApp/setting.pyls
+Give acess to allowed host ['*']
+Timezone--Dhaka
+
+python3 manage.py runserver
+python3 manage.py migrate
+python3 manage.py runserver 0.0.0.0:8000
+vi Dockerfile
+sudo docker buil -t todo-app .
+sudo docker run -p 8000:8000 image id
+
+url:8000---running
+Jenkins setup
+===================
+sudo apt update
+sudo apt install default-jre
+java --version
+sudo apt install jenkins
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+check in brower by ip adress:8080
+
+No need all these just use
+
+*sudo docker pull jenkins/jenkins
+*sudo docker run -d -p 8080:8080 docker.iojenkins:latest
+Register in it
+
+create an agent
+give path in remote directory /home/ubuntu
+and save it
+
+Go to Dashboard-->Build Steps-->execute shell--> cd /home/ubuntu/newproject/django-todo
+
+Give permission chmod 777 django-todo
+
+docker build . -t todo-dev
+docker run -d -p 8000:8000 todo-dev
+
+
+
+
+
+
+
+
 ```
 
 Once the server is hosted, head over to http://127.0.0.1:8000/todos for the App.
