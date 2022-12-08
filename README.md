@@ -78,8 +78,10 @@ Go to Dashboard-->Build Steps-->execute shell--> cd /home/ubuntu/newproject/djan
 
 Give permission chmod 777 django-todo
 
-docker build . -t todo-dev
-docker run -d -p 8000:8000 todo-dev
+sudo docker build . -t todo-dev
+sudo docker run -d -p 8000:8000 todo-dev
+
+Build It
 
 
 
